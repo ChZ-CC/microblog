@@ -1,0 +1,21 @@
+# no python env
+flask/
+
+# no .env
+.env
+
+# no cache file
+*.pyc
+__pycache__/
+app/*.pyc
+app/**/__pycache__/
+
+# no tempt note
+NOTE.md
+*.bk
+
+# no database file
+.DS_Store
+app.db
+app/.DS_Store
+migrations/.DS_Store

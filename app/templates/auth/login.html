@@ -1,0 +1,48 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+    <h1>{{ _('Sign In') }}</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form) }}
+        </div>
+    </div>
+    <br>
+    <p>{{ _('New User?') }} <a href="{{ url_for('auth.register') }}">{{ _('Click to Register!') }}</a></p>
+    <p>
+        {{ _('Forgot Your Password?') }}
+        <a href="{{ url_for('auth.reset_password_request') }}">{{ _('Click to Reset It') }}</a>
+    </p>
+{% endblock %}
+
+<!-- <form action="" method="post" name="login">
+    {{form.hidden_tag()}}
+    form.hidden_tag() 模板参数将被替换为一个隐藏字段，用来是实现在配置中激活的 CSRF 保护。
+        如果你已经激活了 CSRF，这个字段需要出现在你所有的表单中。
+    <p>
+        {{ form.username.label }}<br>
+        {{ form.username(size=32) }}<br>
+        加强字段验证
+        {% for error in form.username.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.password.label }}<br>
+        {{ form.password(size=32) }}<br>
+        加强字段验证
+        {% for error in form.password.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+    <p>{{ form.submit() }}</p>
+    呈现 openID
+    
+    |{% for pr in providers %}
+    <a href="javascript:set_openid('{{ pr.url }}', '{{ pr.name }}');">{{ pr.name }}</a> |
+    {% endfor %}
+   
+</form> -->
