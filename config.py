@@ -9,7 +9,7 @@ class Config(object):
     # 激活 跨站点请求伪造 保护
     #CSRF_ENABLED = True 
     # 当 CSRF 激活时，需要配置 SECRET_KEY，用于验证表单的一个加密令牌。
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'you-will-never-guess'
+    SECRET_KEY = os.environ.get('SECRET_KEY')
     # SQLALCHEMY_DATABASE_URI 是 Flask-SQLAlchemy 扩展需要的，是数据库文件路径
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'app.db')
@@ -23,7 +23,8 @@ class Config(object):
     MAIL_USE_SSL = os.environ.get('MAIL_USE_SSL') is not None
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    ADMINS = ['testforflask@163.com']
+    #ADMINS = ['testforflask@163.com']
+    ADMINS = ['ccxjj@chzcc.live']
     LANGUAGES = ['en', 'zh']
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
