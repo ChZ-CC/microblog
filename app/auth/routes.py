@@ -31,7 +31,11 @@ def login():
 @bp.route('/logout')
 def logout():
     logout_user()
-    return redirect(url_for('main.index'))
+    back2page = request.headers.get('Referer')
+    if not back2page:
+        back2page = url_for('main.index')
+    return redirect(back2page)
+
 
 
 @bp.route('/register', methods=['GET', 'POST'])
