@@ -1,7 +1,7 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block title %}
-    {% if title %}{{ title }} - Microblog{% else %}{{ _('Welcome to Microblog') }}{% endif %}
+    {% if title %}{{ _('%(t)s  - Microblog', t=title)}}{% else %}{{ _('Welcome to Microblog') }}{% endif %}
 {% endblock %}
 
 {% block navbar %}
@@ -61,6 +61,12 @@
 {% block scripts %}
     {{ super() }}
     {{ moment.include_moment() }}
+    {% if g.locale=='zh' %}
+    {% set local_lang = 'zh-cn' %}
+    {% else %}
+    {% set local_lang = g.locale %}
+    {% endif %}
+    {{ moment.locale(local_lang) }}
     <script>
         function translate(sourceElem, destElem, sourceLang, destLang) {
             $(destElem).html('<img src="{{ url_for('static', filename='loading.gif') }}">');

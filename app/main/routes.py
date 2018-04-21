@@ -47,7 +47,7 @@ def index():
 
 
 @bp.route('/explore')
-@login_required
+#@login_required
 def explore():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.timestamp.desc()).paginate(

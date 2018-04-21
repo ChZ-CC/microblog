@@ -27,7 +27,7 @@ class Config(object):
     LANGUAGES = ['en', 'zh']
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
-    POSTS_PER_PAGE = 3
+    POSTS_PER_PAGE = 25
 
 
 # 大的互联网服务提供商支持 OpenID 认证自己的会员

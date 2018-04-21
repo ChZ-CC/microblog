@@ -4,7 +4,7 @@ flask/
 # no .env
 .env
 
-# no cache file
+# no python cache file
 *.pyc
 __pycache__/
 app/*.pyc
@@ -19,3 +19,6 @@ NOTE.md
 app.db
 app/.DS_Store
 migrations/.DS_Store
+
+# no log file
+logs/
