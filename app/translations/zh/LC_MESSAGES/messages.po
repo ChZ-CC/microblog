@@ -73,7 +73,7 @@ msgstr "该邮箱已被注册，换一个试试。"
 
 #: app/auth/forms.py:37 app/auth/forms.py:45
 msgid "Request Password Reset"
-msgstr "申请重置密码"
+msgstr "提交重置密码"
 
 #: app/auth/routes.py:21
 msgid "Invalid username or password"
