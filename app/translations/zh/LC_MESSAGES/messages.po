@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-21 13:31+0800\n"
+"POT-Creation-Date: 2018-04-22 14:38+0800\n"
 "PO-Revision-Date: 2018-03-28 22:03+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -58,7 +58,7 @@ msgstr "邮箱"
 msgid "Repeat Password"
 msgstr "重复密码"
 
-#: app/auth/forms.py:22 app/auth/routes.py:49
+#: app/auth/forms.py:22 app/auth/routes.py:53
 #: app/templates/auth/register.html:5
 msgid "Register"
 msgstr "注册"
@@ -79,19 +79,19 @@ msgstr "提交重置密码"
 msgid "Invalid username or password"
 msgstr "无效用户名或密码"
 
-#: app/auth/routes.py:47
+#: app/auth/routes.py:51
 msgid "Congratulations, you are now a registered user!"
 msgstr "恭喜，注册成功！"
 
-#: app/auth/routes.py:63
+#: app/auth/routes.py:67
 msgid "Check your email for the instructions to reset your password"
 msgstr "请查看邮件，按操作说明重置密码。"
 
-#: app/auth/routes.py:66 app/templates/auth/reset_password_request.html:5
+#: app/auth/routes.py:70 app/templates/auth/reset_password_request.html:5
 msgid "Reset Password"
 msgstr "重置密码"
 
-#: app/auth/routes.py:80
+#: app/auth/routes.py:84
 msgid "Your password has been reset."
 msgstr "您的密码已重置。"
 
@@ -152,14 +152,14 @@ msgstr "不能取关自己！"
 #: app/main/routes.py:124
 #, python-format
 msgid "You are not following %(username)s."
-msgstr "你取关了 %(username)s"
+msgstr "你取消关注了 %(username)s"
 
-#: app/templates/_post.html:14
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s  发表于 %(when)s"
 
-#: app/templates/_post.html:25
+#: app/templates/_post.html:27
 msgid "Translate"
 msgstr "翻译"
 
@@ -225,12 +225,12 @@ msgstr "用户："
 msgid "Last seen on:"
 msgstr "最近一次登录"
 
-#: app/templates/user.html:14
+#: app/templates/user.html:14 app/templates/user_popup.html:16
 #, python-format
 msgid "%(count)d followers"
 msgstr "%(count)d 个粉丝"
 
-#: app/templates/user.html:14
+#: app/templates/user.html:14 app/templates/user_popup.html:17
 #, python-format
 msgid "%(count)d following"
 msgstr "关注了 %(count)d 人"
@@ -239,13 +239,17 @@ msgstr "关注了 %(count)d 人"
 msgid "Edit your profile"
 msgstr "编辑个人资料"
 
-#: app/templates/user.html:18
+#: app/templates/user.html:18 app/templates/user_popup.html:21
 msgid "Follow"
 msgstr "关注"
 
-#: app/templates/user.html:20
+#: app/templates/user.html:20 app/templates/user_popup.html:25
 msgid "Unfollow"
 msgstr "取关"
+
+#: app/templates/user_popup.html:13
+msgid "Last seen on"
+msgstr "最近登录于："
 
 #: app/templates/auth/login.html:13
 msgid "New User?"
