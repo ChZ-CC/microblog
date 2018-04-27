@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-22 14:38+0800\n"
+"POT-Creation-Date: 2018-04-28 00:20+0800\n"
 "PO-Revision-Date: 2018-03-28 22:03+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -99,7 +99,7 @@ msgstr "您的密码已重置。"
 msgid "About me"
 msgstr "个性签名"
 
-#: app/main/forms.py:13 app/main/forms.py:28
+#: app/main/forms.py:13 app/main/forms.py:28 app/main/forms.py:45
 msgid "Submit"
 msgstr "发布"
 
@@ -107,52 +107,64 @@ msgstr "发布"
 msgid "Say something"
 msgstr "说点儿啥"
 
-#: app/main/forms.py:32 app/main/routes.py:148
+#: app/main/forms.py:32 app/main/routes.py:149
 msgid "Search"
 msgstr "搜索"
 
-#: app/main/routes.py:35
+#: app/main/forms.py:43
+msgid "Message"
+msgstr "纸条"
+
+#: app/main/routes.py:36
 msgid "Your post is now live!"
 msgstr "发布成功！"
 
-#: app/main/routes.py:44 app/templates/base.html:21
+#: app/main/routes.py:45 app/templates/base.html:21
 msgid "Home"
 msgstr "主页"
 
-#: app/main/routes.py:59 app/templates/base.html:22
+#: app/main/routes.py:60 app/templates/base.html:22
 msgid "Explore"
 msgstr "随便看看"
 
-#: app/main/routes.py:87
+#: app/main/routes.py:88
 msgid "Your changes have been saved."
 msgstr "资料已保存。"
 
-#: app/main/routes.py:92 app/templates/edit_profile.html:5
+#: app/main/routes.py:93 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "编辑个人资料中…"
 
-#: app/main/routes.py:101 app/main/routes.py:117
+#: app/main/routes.py:102 app/main/routes.py:118
 #, python-format
 msgid "User %(username)s not found."
 msgstr "用户 %(username)s 不存在"
 
-#: app/main/routes.py:104
+#: app/main/routes.py:105
 msgid "You cannot follow yourself!"
 msgstr "不能粉你自己啦！"
 
-#: app/main/routes.py:108
+#: app/main/routes.py:109
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "已经关注 %(username)s 啦！"
 
-#: app/main/routes.py:120
+#: app/main/routes.py:121
 msgid "You cannot unfollow yourself!"
 msgstr "不能取关自己！"
 
-#: app/main/routes.py:124
+#: app/main/routes.py:125
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "你取消关注了 %(username)s"
+
+#: app/main/routes.py:172
+msgid "Your message has been sent."
+msgstr "纸条已悄悄的塞进对方的抽屉。"
+
+#: app/main/routes.py:174
+msgid "Send Message"
+msgstr "递纸条"
 
 #: app/templates/_post.html:16
 #, python-format
@@ -172,19 +184,27 @@ msgstr "%(t)s - CC的小屋"
 msgid "Welcome to Microblog"
 msgstr "欢迎光临 -CC的小屋"
 
+#: app/templates/base.html:17
+msgid "Microblog"
+msgstr "CC的小屋"
+
 #: app/templates/base.html:35
 msgid "Login"
 msgstr "登录"
 
-#: app/templates/base.html:37
+#: app/templates/base.html:39
+msgid "Messages"
+msgstr "纸条"
+
+#: app/templates/base.html:48
 msgid "Profile"
 msgstr "个人中心"
 
-#: app/templates/base.html:38
+#: app/templates/base.html:49
 msgid "Logout"
 msgstr "退出"
 
-#: app/templates/base.html:80
+#: app/templates/base.html:91
 msgid "Error: Could not contact server."
 msgstr "错误：Could not contact server."
 
@@ -197,13 +217,25 @@ msgstr "%(username)s 在此！"
 msgid "Hi, Stranger!"
 msgstr "你好呀，陌生人！"
 
-#: app/templates/index.html:25 app/templates/user.html:33
+#: app/templates/index.html:25 app/templates/user.html:41
 msgid "Newer posts"
 msgstr "前一页"
 
-#: app/templates/index.html:30 app/templates/user.html:38
+#: app/templates/index.html:30 app/templates/user.html:46
 msgid "Older posts"
 msgstr "后一页"
+
+#: app/templates/messages.html:4
+msgid "Messages:"
+msgstr "收到的纸条："
+
+#: app/templates/messages.html:12
+msgid "Newer messages"
+msgstr "新纸条"
+
+#: app/templates/messages.html:17
+msgid "Older messages"
+msgstr "旧纸条"
 
 #: app/templates/search.html:4
 msgid "Search Results"
@@ -217,9 +249,14 @@ msgstr "前一页"
 msgid "Next results"
 msgstr "后一页"
 
+#: app/templates/send_message.html:5
+#, python-format
+msgid "Send Message to %(recipient)s"
+msgstr "给 %(recipient)s 递纸条"
+
 #: app/templates/user.html:8
 msgid "User:"
-msgstr "用户："
+msgstr "昵称:"
 
 #: app/templates/user.html:11
 msgid "Last seen on:"
@@ -228,12 +265,12 @@ msgstr "最近一次登录"
 #: app/templates/user.html:14 app/templates/user_popup.html:16
 #, python-format
 msgid "%(count)d followers"
-msgstr "%(count)d 个粉丝"
+msgstr "粉丝：%(count)d"
 
 #: app/templates/user.html:14 app/templates/user_popup.html:17
 #, python-format
 msgid "%(count)d following"
-msgstr "关注了 %(count)d 人"
+msgstr "关注：%(count)d"
 
 #: app/templates/user.html:16
 msgid "Edit your profile"
@@ -246,6 +283,10 @@ msgstr "关注"
 #: app/templates/user.html:20 app/templates/user_popup.html:25
 msgid "Unfollow"
 msgstr "取关"
+
+#: app/templates/user.html:26
+msgid "Send private message"
+msgstr "递纸条"
 
 #: app/templates/user_popup.html:13
 msgid "Last seen on"
@@ -273,7 +314,7 @@ msgstr "重置密码"
 
 #: app/templates/errors/404.html:4
 msgid "File Not Found"
-msgstr "文件不存在"
+msgstr "页面不存在"
 
 #: app/templates/errors/404.html:5 app/templates/errors/500.html:6
 msgid "Back"

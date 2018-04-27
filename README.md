@@ -1,4 +1,4 @@
-This is a practice Web Application written in python Flask. Visit [Microblog](https://test.chzcc.live).
+This is a practice Web Application written in python Flask. Visit [Microblog](https://koya.chzcc.live/explore).
 
 Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/microblog).
 
