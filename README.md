@@ -12,8 +12,9 @@ Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/
 - [x] 发布消息/编辑个人资料/头像（gravatar）
 - [x] 关注和取消关注
 - [x] 支持中英双语（目前被我强制设置成了汉语）
-- [ ] 全文搜索（服务器未安装elasticsearch）
+- [ ] 全文搜索（暂不支持。因为elasticsearch太耗内存，没在服务器端开启。）
 - [x] 鼠标悬停弹出用户名片
+- [x] 小纸条功能
 
 用到的库和工具：
 
@@ -31,7 +32,7 @@ Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/
 
 ## 章节笔记
 
-> 未完成
+> 待完成
 
 ---
 
@@ -64,3 +65,11 @@ Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/
 #### 鼠标悬停 `2018-4-22`
 
 根据 Miguel 的教程第20章，实现鼠标悬停跳出用户名片的功能。主要难题在 JavaScript 部分。需要学习。
+
+#### 发送私信 `2018-4-27`
+
+第21章。
+
+#### 百度翻译 `2018-5-3`
+
+将微软翻译换成了接地气的百度翻译。

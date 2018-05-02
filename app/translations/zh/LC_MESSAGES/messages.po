@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-04-28 00:20+0800\n"
+"POT-Creation-Date: 2018-05-03 01:09+0800\n"
 "PO-Revision-Date: 2018-03-28 22:03+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -22,13 +22,17 @@ msgstr ""
 msgid "Please log in to access this page."
 msgstr " 你得先登录才能访问这个页面哦。"
 
-#: app/translate.py:9
+#: app/translate.py:13 app/translate.py:26
 msgid "Error: the translation service is not configured."
 msgstr "错误：the translation service is not configured."
 
-#: app/translate.py:16
+#: app/translate.py:20 app/translate.py:38
 msgid "Error: the translation service failed."
 msgstr "错误：the translation service failed."
+
+#: app/translate.py:44
+msgid "Error: No translation from baidu."
+msgstr "错误: No translation from baidu."
 
 #: app/auth/email.py:8
 msgid "[Microblog] Reset Your Password"
@@ -107,7 +111,7 @@ msgstr "发布"
 msgid "Say something"
 msgstr "说点儿啥"
 
-#: app/main/forms.py:32 app/main/routes.py:149
+#: app/main/forms.py:32 app/main/routes.py:155
 msgid "Search"
 msgstr "搜索"
 
@@ -135,7 +139,7 @@ msgstr "资料已保存。"
 msgid "Edit Profile"
 msgstr "编辑个人资料中…"
 
-#: app/main/routes.py:102 app/main/routes.py:118
+#: app/main/routes.py:102 app/main/routes.py:121
 #, python-format
 msgid "User %(username)s not found."
 msgstr "用户 %(username)s 不存在"
@@ -149,20 +153,20 @@ msgstr "不能粉你自己啦！"
 msgid "You are following %(username)s!"
 msgstr "已经关注 %(username)s 啦！"
 
-#: app/main/routes.py:121
+#: app/main/routes.py:124
 msgid "You cannot unfollow yourself!"
 msgstr "不能取关自己！"
 
-#: app/main/routes.py:125
+#: app/main/routes.py:128
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "你取消关注了 %(username)s"
 
-#: app/main/routes.py:172
+#: app/main/routes.py:178
 msgid "Your message has been sent."
 msgstr "纸条已悄悄的塞进对方的抽屉。"
 
-#: app/main/routes.py:174
+#: app/main/routes.py:180
 msgid "Send Message"
 msgstr "递纸条"
 
@@ -217,11 +221,11 @@ msgstr "%(username)s 在此！"
 msgid "Hi, Stranger!"
 msgstr "你好呀，陌生人！"
 
-#: app/templates/index.html:25 app/templates/user.html:41
+#: app/templates/index.html:25 app/templates/user.html:39
 msgid "Newer posts"
 msgstr "前一页"
 
-#: app/templates/index.html:30 app/templates/user.html:46
+#: app/templates/index.html:30 app/templates/user.html:44
 msgid "Older posts"
 msgstr "后一页"
 
@@ -229,11 +233,11 @@ msgstr "后一页"
 msgid "Messages:"
 msgstr "收到的纸条："
 
-#: app/templates/messages.html:12
+#: app/templates/messages.html:13
 msgid "Newer messages"
 msgstr "新纸条"
 
-#: app/templates/messages.html:17
+#: app/templates/messages.html:18
 msgid "Older messages"
 msgstr "旧纸条"
 
@@ -284,7 +288,7 @@ msgstr "关注"
 msgid "Unfollow"
 msgstr "取关"
 
-#: app/templates/user.html:26
+#: app/templates/user.html:25 app/templates/user_popup.html:30
 msgid "Send private message"
 msgstr "递纸条"
 

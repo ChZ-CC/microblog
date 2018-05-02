@@ -14,9 +14,6 @@ class Config(object):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'app.db')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
-    # QLALCHEMY_MIGRATE_REPO 是存放 SQLAlchemy-migrate 数据文件的文件夹。
-    #SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
-    #SQLALCHEMY_COMMIT_ON_TEARDOW = True
     MAIL_SERVER = os.environ.get('MAIL_SERVER')
     MAIL_PORT = int(os.environ.get('MAIL_PORT') or 25)
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
@@ -27,17 +24,8 @@ class Config(object):
     ADMINS = ['system@chzcc.live']
     LANGUAGES = ['en', 'zh']
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
+    BD_TRANSLATOR_KEY = os.environ.get('BD_TRANSLATOR_KEY')
+    BD_TRANSLATOR_ID = os.environ.get('BD_TRANSLATOR_ID')
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     POSTS_PER_PAGE = 25
-
-
-# 大的互联网服务提供商支持 OpenID 认证自己的会员
-#OPENID_PROVIDERS = [
-#    { 'name': 'Google', 'url': 'https://www.google.com/accounts/o8/id' },
-#    { 'name': 'Yahoo', 'url': 'https://me.yahoo.com' },
-#    { 'name': 'AOL', 'url': 'http://openid.aol.com/<username>' },
-#    { 'name': 'Flickr', 'url': 'http://www.flickr.com/<username>' },
-#    { 'name': 'MyOpenID', 'url': 'https://www.myopenid.com' }]
-
-# 数据库配置
 

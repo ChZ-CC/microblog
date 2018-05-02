@@ -7,7 +7,7 @@ from guess_language import guess_language
 from app import db
 from app.main.forms import EditProfileForm, PostForm, SearchForm, MessageForm
 from app.models import User, Post, Message, Notification
-from app.translate import translate
+from app.translate import baidu_translate
 from app.main import bp
 
 
@@ -135,7 +135,7 @@ def unfollow(username):
 @bp.route('/translate', methods=['POST'])
 @login_required
 def translate_text():
-    return jsonify({'text': translate(request.form['text'],
+    return jsonify({'text': baidu_translate(request.form['text'],
                                       request.form['source_language'],
                                       request.form['dest_language'])})
 
