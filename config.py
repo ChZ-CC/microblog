@@ -20,12 +20,13 @@ class Config(object):
     MAIL_USE_SSL = os.environ.get('MAIL_USE_SSL') is not None
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    #ADMINS = ['testforflask@163.com']
-    ADMINS = ['system@chzcc.live']
+    ADMINS = ['testforflask@163.com', 'system@chzcc.live']
+    #ADMINS = ['system@chzcc.live']
     LANGUAGES = ['en', 'zh']
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     BD_TRANSLATOR_KEY = os.environ.get('BD_TRANSLATOR_KEY')
     BD_TRANSLATOR_ID = os.environ.get('BD_TRANSLATOR_ID')
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
     POSTS_PER_PAGE = 25
+    REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'
 

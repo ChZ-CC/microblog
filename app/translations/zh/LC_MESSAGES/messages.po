@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-03 01:09+0800\n"
+"POT-Creation-Date: 2018-05-06 14:56+0800\n"
 "PO-Revision-Date: 2018-03-28 22:03+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.5.3\n"
 
-#: app/__init__.py:20
+#: app/__init__.py:23
 msgid "Please log in to access this page."
 msgstr " 你得先登录才能访问这个页面哦。"
 
@@ -170,6 +170,14 @@ msgstr "纸条已悄悄的塞进对方的抽屉。"
 msgid "Send Message"
 msgstr "递纸条"
 
+#: app/main/routes.py:219
+msgid "An export task is currently in progress"
+msgstr ""
+
+#: app/main/routes.py:221
+msgid "Exporting posts..."
+msgstr "导出中..."
+
 #: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
@@ -208,7 +216,7 @@ msgstr "个人中心"
 msgid "Logout"
 msgstr "退出"
 
-#: app/templates/base.html:91
+#: app/templates/base.html:104
 msgid "Error: Could not contact server."
 msgstr "错误：Could not contact server."
 
@@ -221,11 +229,11 @@ msgstr "%(username)s 在此！"
 msgid "Hi, Stranger!"
 msgstr "你好呀，陌生人！"
 
-#: app/templates/index.html:25 app/templates/user.html:39
+#: app/templates/index.html:25 app/templates/user.html:42
 msgid "Newer posts"
 msgstr "前一页"
 
-#: app/templates/index.html:30 app/templates/user.html:44
+#: app/templates/index.html:30 app/templates/user.html:47
 msgid "Older posts"
 msgstr "后一页"
 
@@ -280,15 +288,19 @@ msgstr "关注：%(count)d"
 msgid "Edit your profile"
 msgstr "编辑个人资料"
 
-#: app/templates/user.html:18 app/templates/user_popup.html:21
+#: app/templates/user.html:18
+msgid "Export your posts"
+msgstr "导出你的帖子"
+
+#: app/templates/user.html:21 app/templates/user_popup.html:21
 msgid "Follow"
 msgstr "关注"
 
-#: app/templates/user.html:20 app/templates/user_popup.html:25
+#: app/templates/user.html:23 app/templates/user_popup.html:25
 msgid "Unfollow"
 msgstr "取关"
 
-#: app/templates/user.html:25 app/templates/user_popup.html:30
+#: app/templates/user.html:28 app/templates/user_popup.html:30
 msgid "Send private message"
 msgstr "递纸条"
 
