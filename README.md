@@ -32,7 +32,8 @@ Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/
 
 ## 章节笔记
 
-> 待完成
+[NOTES.md](./NOTES.md)
+> 未完待续
 
 ---
 
@@ -64,12 +65,23 @@ Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/
         ```
 #### 鼠标悬停 `2018-4-22`
 
-根据 Miguel 的教程第20章，实现鼠标悬停跳出用户名片的功能。主要难题在 JavaScript 部分。需要学习。
+- 根据 Miguel 的教程第20章，实现鼠标悬停跳出用户名片的功能。主要难题在 JavaScript 部分。需要学习。
 
 #### 发送私信 `2018-4-27`
 
-第21章。
+- Chapter 21: Notification。
 
 #### 百度翻译 `2018-5-3`
 
-将微软翻译换成了接地气的百度翻译。
+- 将微软翻译换成了接地气的百度翻译。
+
+#### 导出帖子 `2018-5-6`
+
+- Chapter 22: Backgroud job
+- 邮件发送者做了小小的修改，将发件人从Config配置，改为由.env设置。
+
+#### 页面翻译和图标 `2018-5-20`
+
+- 修改了一些翻译，随便看看-->广场，个人中心-->我的，等等。
+- 编辑个人资料、发送私信、关注/取关、以及导出资料四个选项添加了图标。同时修改了悬停名片的格式。
+
