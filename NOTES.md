@@ -601,7 +601,7 @@ killasgroup=true
 
 ### 要实现的 routes 如下
 
-```
+```
 HTTP Method    Resource URL                 Notes
 GET            /api/users/<id>              Return a user.
 GET            /api/users                   Return the collection of all users.
