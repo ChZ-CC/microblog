@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-05-06 14:56+0800\n"
+"POT-Creation-Date: 2018-05-20 11:54+0800\n"
 "PO-Revision-Date: 2018-03-28 22:03+0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: zh\n"
@@ -24,15 +24,15 @@ msgstr " 你得先登录才能访问这个页面哦。"
 
 #: app/translate.py:13 app/translate.py:26
 msgid "Error: the translation service is not configured."
-msgstr "错误：the translation service is not configured."
+msgstr "Error：抱歉，未配置翻译服务."
 
 #: app/translate.py:20 app/translate.py:38
 msgid "Error: the translation service failed."
-msgstr "错误：the translation service failed."
+msgstr "Error：翻译服务宕机，刷新页面重试."
 
 #: app/translate.py:44
 msgid "Error: No translation from baidu."
-msgstr "错误: No translation from baidu."
+msgstr "Error: 百度翻译抽风了，请刷新页面重试."
 
 #: app/auth/email.py:8
 msgid "[Microblog] Reset Your Password"
@@ -111,7 +111,7 @@ msgstr "发布"
 msgid "Say something"
 msgstr "说点儿啥"
 
-#: app/main/forms.py:32 app/main/routes.py:155
+#: app/main/forms.py:32 app/main/routes.py:156
 msgid "Search"
 msgstr "搜索"
 
@@ -129,52 +129,60 @@ msgstr "主页"
 
 #: app/main/routes.py:60 app/templates/base.html:22
 msgid "Explore"
-msgstr "随便看看"
+msgstr "广场"
 
-#: app/main/routes.py:88
+#: app/main/routes.py:76
+msgid "Profile"
+msgstr "个人中心"
+
+#: app/main/routes.py:89
 msgid "Your changes have been saved."
 msgstr "资料已保存。"
 
-#: app/main/routes.py:93 app/templates/edit_profile.html:5
+#: app/main/routes.py:94 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "编辑个人资料中…"
 
-#: app/main/routes.py:102 app/main/routes.py:121
+#: app/main/routes.py:103 app/main/routes.py:122
 #, python-format
 msgid "User %(username)s not found."
 msgstr "用户 %(username)s 不存在"
 
-#: app/main/routes.py:105
+#: app/main/routes.py:106
 msgid "You cannot follow yourself!"
 msgstr "不能粉你自己啦！"
 
-#: app/main/routes.py:109
+#: app/main/routes.py:110
 #, python-format
 msgid "You are following %(username)s!"
 msgstr "已经关注 %(username)s 啦！"
 
-#: app/main/routes.py:124
+#: app/main/routes.py:125
 msgid "You cannot unfollow yourself!"
 msgstr "不能取关自己！"
 
-#: app/main/routes.py:128
+#: app/main/routes.py:129
 #, python-format
 msgid "You are not following %(username)s."
 msgstr "你取消关注了 %(username)s"
 
-#: app/main/routes.py:178
+#: app/main/routes.py:179
 msgid "Your message has been sent."
 msgstr "纸条已悄悄的塞进对方的抽屉。"
 
-#: app/main/routes.py:180
+#: app/main/routes.py:181
 msgid "Send Message"
 msgstr "递纸条"
 
-#: app/main/routes.py:219
+#: app/main/routes.py:199 app/templates/base.html:39
+msgid "Messages"
+msgstr "纸条"
+
+#: app/main/routes.py:221
 msgid "An export task is currently in progress"
 msgstr ""
 
-#: app/main/routes.py:221
+#: app/main/routes.py:223
 msgid "Exporting posts..."
 msgstr "导出中..."
 
@@ -204,13 +212,9 @@ msgstr "CC的小屋"
 msgid "Login"
 msgstr "登录"
 
-#: app/templates/base.html:39
-msgid "Messages"
-msgstr "纸条"
-
 #: app/templates/base.html:48
-msgid "Profile"
-msgstr "个人中心"
+msgid "MyProfile"
+msgstr "我的"
 
 #: app/templates/base.html:49
 msgid "Logout"
@@ -223,17 +227,17 @@ msgstr "错误：Could not contact server."
 #: app/templates/index.html:6
 #, python-format
 msgid "Hi, %(username)s!"
-msgstr "%(username)s 在此！"
+msgstr "(｡･∀･)ﾉﾞ嗨，%(username)s！"
 
 #: app/templates/index.html:8
 msgid "Hi, Stranger!"
 msgstr "你好呀，陌生人！"
 
-#: app/templates/index.html:25 app/templates/user.html:42
+#: app/templates/index.html:25 app/templates/user.html:57
 msgid "Newer posts"
 msgstr "前一页"
 
-#: app/templates/index.html:30 app/templates/user.html:47
+#: app/templates/index.html:30 app/templates/user.html:62
 msgid "Older posts"
 msgstr "后一页"
 
@@ -251,7 +255,7 @@ msgstr "旧纸条"
 
 #: app/templates/search.html:4
 msgid "Search Results"
-msgstr "找到了这些"
+msgstr "找到以下内容"
 
 #: app/templates/search.html:13
 msgid "Previous results"
@@ -266,47 +270,35 @@ msgstr "后一页"
 msgid "Send Message to %(recipient)s"
 msgstr "给 %(recipient)s 递纸条"
 
-#: app/templates/user.html:8
-msgid "User:"
-msgstr "昵称:"
-
 #: app/templates/user.html:11
 msgid "Last seen on:"
-msgstr "最近一次登录"
+msgstr "最近登录:"
 
-#: app/templates/user.html:14 app/templates/user_popup.html:16
+#: app/templates/user.html:22 app/templates/user_popup.html:17
 #, python-format
 msgid "%(count)d followers"
-msgstr "粉丝：%(count)d"
+msgstr "粉丝%(count)d个"
 
-#: app/templates/user.html:14 app/templates/user_popup.html:17
+#: app/templates/user.html:22 app/templates/user_popup.html:17
 #, python-format
 msgid "%(count)d following"
-msgstr "关注：%(count)d"
+msgstr "关注%(count)d人"
 
-#: app/templates/user.html:16
-msgid "Edit your profile"
-msgstr "编辑个人资料"
-
-#: app/templates/user.html:18
+#: app/templates/user.html:25 app/templates/user_popup.html:20
 msgid "Export your posts"
-msgstr "导出你的帖子"
+msgstr "导出帖子"
 
-#: app/templates/user.html:21 app/templates/user_popup.html:21
+#: app/templates/user.html:30 app/templates/user_popup.html:23
 msgid "Follow"
 msgstr "关注"
 
-#: app/templates/user.html:23 app/templates/user_popup.html:25
+#: app/templates/user.html:35 app/templates/user_popup.html:25
 msgid "Unfollow"
 msgstr "取关"
 
-#: app/templates/user.html:28 app/templates/user_popup.html:30
+#: app/templates/user.html:43 app/templates/user_popup.html:30
 msgid "Send private message"
 msgstr "递纸条"
-
-#: app/templates/user_popup.html:13
-msgid "Last seen on"
-msgstr "最近登录于："
 
 #: app/templates/auth/login.html:13
 msgid "New User?"
@@ -343,4 +335,13 @@ msgstr "呃，不晓得发生了什么 = =。"
 #: app/templates/errors/500.html:5
 msgid "The administrator has been notified. Sorry for the inconvenience!"
 msgstr "已通知管理员。抱歉给您带来不便。"
+
+#~ msgid "Edit your profile"
+#~ msgstr "编辑个人资料"
+
+#~ msgid "User:"
+#~ msgstr "昵称:"
+
+#~ msgid "Last seen on"
+#~ msgstr "最近登录于："
 
