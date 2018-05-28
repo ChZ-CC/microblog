@@ -11,7 +11,8 @@ Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/
 - [x] 用户注册/登录/重置密码
 - [x] 发布消息/编辑个人资料/头像（gravatar）
 - [x] 关注和取消关注
-- [x] 支持中英双语（目前被我强制设置成了汉语）
+- [x] 多语言支持（目前被我强制设置成了汉语）
+- [x] 翻译
 - [ ] 全文搜索（暂不支持。因为elasticsearch太耗内存，没在服务器端开启。）
 - [x] 鼠标悬停弹出用户名片
 - [x] 小纸条功能
@@ -24,8 +25,9 @@ Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/
 - 登录/注册验证：Flask-Login、Flask-WTF；flask_httpauth（for API）
 - 数据库：Flask-SQLAlchemy、Flask-Migrate
 - 时间/日期：Flask-Moment
-- 语言：Flask-Babel
+- 多语言：Flask-Babel
 - CSS 框架：Flask-Bootstrap
+- 翻译：百度 trans API
 - 邮箱服务：Flask-Mail
 - Ajax：JavaScript
 - 服务器部署：gunicorn（webserver）、Nginx（反向代理）、postfix（邮箱服务）、git（版本控制）、certbot（证书）、MySQL（数据库）。
