@@ -11,14 +11,14 @@
                     <sub><small>{{ _('Last seen on:') }} {{ moment(user.last_seen).format('M月D日 HH:mm:ss') }}</small></sub>
                     {% endif %}
                 </h3>
-                {% if user.about_me %}
-                <p>{{ user.about_me }}
-                    {% if user == current_user %}
-                        <a href="{{ url_for('main.edit_profile') }}">
-                            <span class="glyphicon glyphicon-edit"></span>
-                        </a>
-                    {% endif %}
-                </p>{% endif %}
+                <p>
+                {% if user.about_me %}{{ user.about_me }}{% endif %}
+                {% if user == current_user %}
+                    <a href="{{ url_for('main.edit_profile') }}">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </a>
+                {% endif %}
+                </p>
                 <p>{{ _('%(count)d followers', count=user.followers.count()) }} {{ _('%(count)d following', count=user.followed.count()) }}</p>
                 {% if user == current_user %}
                     {% if not current_user.get_task_in_progress('export_posts') %}
