@@ -15,11 +15,13 @@ Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/
 - [ ] 全文搜索（暂不支持。因为elasticsearch太耗内存，没在服务器端开启。）
 - [x] 鼠标悬停弹出用户名片
 - [x] 小纸条功能
+- [x] 导出帖子
+- [x] REST APIs
 
 用到的库和工具：
 
 - 基础：Flask、Jinja2、python-dotenv、requests、threading
-- 登录/注册验证：Flask-Login、Flask-WTF
+- 登录/注册验证：Flask-Login、Flask-WTF；flask_httpauth（for API）
 - 数据库：Flask-SQLAlchemy、Flask-Migrate
 - 时间/日期：Flask-Moment
 - 语言：Flask-Babel
@@ -27,6 +29,7 @@ Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/
 - 邮箱服务：Flask-Mail
 - Ajax：JavaScript
 - 服务器部署：gunicorn（webserver）、Nginx（反向代理）、postfix（邮箱服务）、git（版本控制）、certbot（证书）、MySQL（数据库）。
+- 后台任务：rq、redis
 
 ---
 
@@ -84,4 +87,8 @@ Referrence Tutorial: [Miguel Grinberg's blog](https://github.com/miguelgrinberg/
 
 - 修改了一些翻译，随便看看-->广场，个人中心-->我的，等等。
 - 编辑个人资料、发送私信、关注/取关、以及导出资料四个选项添加了图标。同时修改了悬停名片的格式。
+
+#### REST APIs `2018-5-28`
+
+- Chapter 23: Application Programming Interfaces (APIs) 
 
