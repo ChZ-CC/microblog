@@ -1,8 +1,10 @@
 # no python env
 flask/
+venv*
 
-# no .env
+# no config files
 .env
+.vscode
 
 # no python cache file
 *.pyc
